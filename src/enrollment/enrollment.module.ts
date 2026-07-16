@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
-import { FileV1Controller } from './controllers/file-upload.controller';
 import { FileService } from './services/file-upload.service';
+import { FileV1Controller } from './controllers/file-upload.controller';
 import { FileDto } from './dto/file.model';
 import { FileStatusDto, GetFileStatusDto } from './dto/file-status.dto';
 
