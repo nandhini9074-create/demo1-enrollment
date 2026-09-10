@@ -7,7 +7,7 @@ export class FileDto {
   @IsString()
   data: string;
 
-  @ApiProperty({ example: '2026-05-20T10:00:00Z' })
+  @ApiProperty({ example: '2026-05-20T10:00:00X' })
   @IsString()
   fileDateTime: string;
 
