@@ -15,7 +15,7 @@ import { FileStatusDto, GetFileStatusDto } from '../dto/file-status.dto';
 
 @Controller({ version: '1', path: 'enrollment' })
 export class EnrollmentController {
-  constructor(private readonly fileService: FileService) {}
+  constructor(private readonly fileService: FileService) { }
 
   @HttpCode(HttpStatus.OK)
   @Post('processPan')
@@ -49,7 +49,7 @@ export class EnrollmentController {
   async getFileProcessStatus(
     @Body() fileDto: GetFileStatusDto,
   ): Promise<BaseResponse<boolean>> {
-    const result = await this.fileService.getFileStatus(fileDto?.fileName);
+    const result = await this.fileService.getFileStatus(fileDto?.fileRecordNum);
     return baseResponseHelper(result);
   }
 }
