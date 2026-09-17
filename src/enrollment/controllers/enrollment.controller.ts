@@ -49,7 +49,7 @@ export class EnrollmentController {
   async getFileProcessStatus(
     @Body() fileDto: GetFileStatusDto,
   ): Promise<BaseResponse<boolean>> {
-    const result = await this.fileService.getFileStatus(fileDto?.fileRecordNum);
+    const result = await this.fileService.getFileStatus(fileDto?.fileRecordName);
     return baseResponseHelper(result);
   }
 }
